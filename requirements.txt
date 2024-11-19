@@ -1,1 +1,3 @@
 ebaysdk==2.2.0
+pandas==2.2.3
+python-dotenv==1.0.1

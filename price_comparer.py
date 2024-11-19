@@ -1,8 +1,15 @@
+import os
 import json
+import decimal
 from ebaysdk.finding import Connection as Finding
+from ebaysdk.shopping import Connection as Shopping
 from ebaysdk.exception import ConnectionError
 from dotenv import load_dotenv
 import logging
+
+load_dotenv()
+
+APPID = os.getenv('APPID')
 
 class EbayPriceComparer:
     def __init__(self, app_id):
@@ -76,7 +83,7 @@ class EbayPriceComparer:
 # Example usage
 if __name__ == "__main__":
     # Replace 'ebay_app_id' with your actual eBay developer app ID
-    app_id = ebay_app_id
+    app_id = APPID
     comparer = EbayPriceComparer(app_id)
 
     query = "laptop"
