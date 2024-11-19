@@ -1,6 +1,8 @@
 import json
 from ebaysdk.finding import Connection as Finding
 from ebaysdk.exception import ConnectionError
+from dotenv import load_dotenv
+import logging
 
 class EbayPriceComparer:
     def __init__(self, app_id):
